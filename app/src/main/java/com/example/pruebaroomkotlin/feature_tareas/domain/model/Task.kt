@@ -1,4 +1,13 @@
 package com.example.pruebaroomkotlin.feature_tareas.domain.model
 
-class Task {
-}
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity
+data class Task(
+    @PrimaryKey
+    val id: Int? = null,
+    val name: String,
+    val content: String,
+    val timeStamp: Long,
+)
