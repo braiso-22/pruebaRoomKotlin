@@ -10,4 +10,8 @@ import com.example.pruebaroomkotlin.feature_tareas.domain.model.Task
 )
 abstract class TaskDatabase: RoomDatabase() {
     abstract val taskDao: TaskDao
+
+    companion object{
+        const val DATABASE_NAME = "tasks_db"
+    }
 }
