@@ -63,16 +63,16 @@ dependencies {
     // Coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
-    // Kotlin Extensions and coroutines support for Room
-    implementation 'androidx.room:room-ktx:2.5.0'
     // Dagger - hilt
     implementation 'com.google.dagger:hilt-android:2.44.2'
     annotationProcessor  'com.google.dagger:hilt-compiler:2.44.2'
     implementation 'androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03'
     annotationProcessor  'androidx.hilt:hilt-compiler:1.0.0'
     // Room
-    implementation 'androidx.room:room-runtime:2.5.0'
-    annotationProcessor 'androidx.room:room-compiler:2.5.0'
+    implementation 'androidx.room:room-runtime:2.4.3'
+    annotationProcessor 'androidx.room:room-compiler:2.4.3'
+    // Kotlin Extensions and coroutines support for Room
+    implementation 'androidx.room:room-ktx:2.4.3'
     //Testing
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
