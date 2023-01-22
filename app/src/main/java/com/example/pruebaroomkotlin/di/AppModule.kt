@@ -5,6 +5,7 @@ import androidx.room.Room
 import com.example.pruebaroomkotlin.feature_tareas.data.data_source.TaskDatabase
 import com.example.pruebaroomkotlin.feature_tareas.domain.repository.TaskRepository
 import com.example.pruebaroomkotlin.feature_tareas.domain.repository.TaskRepositoryImpl
+import com.example.pruebaroomkotlin.feature_tareas.domain.use_case.CreateTaskUseCase
 import com.example.pruebaroomkotlin.feature_tareas.domain.use_case.DeleteTaskUseCase
 import com.example.pruebaroomkotlin.feature_tareas.domain.use_case.GetTasksUseCase
 import com.example.pruebaroomkotlin.feature_tareas.domain.use_case.TaskUseCases
@@ -38,7 +39,8 @@ object AppModule {
     fun provideTaskUseCases(repository: TaskRepository): TaskUseCases{
         return TaskUseCases(
             getTasks = GetTasksUseCase(repository),
-            deleteTask = DeleteTaskUseCase(repository)
+            deleteTask = DeleteTaskUseCase(repository),
+            createTask = CreateTaskUseCase(repository),
         )
     }
 

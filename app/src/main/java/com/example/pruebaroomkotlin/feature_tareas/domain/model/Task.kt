@@ -11,3 +11,5 @@ data class Task(
     val content: String,
     val timeStamp: Long,
 )
+
+class InvalidTaskException(message: String): Exception(message)
