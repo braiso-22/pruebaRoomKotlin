@@ -85,7 +85,8 @@ fun TasksScreen(
                             task = task,
                             modifier = Modifier
                                 .fillMaxWidth()
-                                .clickable { }) {
+                                .clickable { }
+                        ) {
                             viewModel.onEvent(TasksEvent.DeleteTask(task))
                             scope.launch {
                                 val result = scaffoldState.snackbarHostState.showSnackbar(
