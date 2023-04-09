@@ -27,9 +27,9 @@ fun AddEditNoteScreen(
 
     val scaffoldState = rememberScaffoldState()
 
-    LaunchedEffect(key1 = true,){
+    LaunchedEffect(key1 = true) {
         viewModel.eventFlow.collectLatest { event ->
-            when(event){
+            when (event) {
                 is AddEditTaskViewModel.UiEvent.ShowSnackBar -> {
                     scaffoldState.snackbarHostState.showSnackbar(
                         message = event.message
